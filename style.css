@@ -28,6 +28,7 @@ body {
   --primary: #0077b6;
   --secondary: #00b4d8;
   --accent: #caf0f8;
+  --text-color: #332e2e;
 }
 
 /* === Global Layout === */
@@ -59,8 +60,29 @@ body {
 .navbar-brand {
   font-weight: 700;
   color: var(--primary);
-  font-size: 50px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9), 4px 4px 10px rgba(0, 0, 0, 0.9);
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9),
+    4px 4px 10px rgba(0, 0, 0, 0.9);
+}
+.display-5 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9),
+    4px 4px 10px rgba(0, 0, 0, 0.9);
+}
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  box-shadow: #1ebc5b;
+  text-shadow: #1ebc5b;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 25px;
 }
 
 .navbar-nav .nav-link {
@@ -94,6 +116,7 @@ body {
 .hero-section h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .hero-section h2 span {
@@ -102,18 +125,23 @@ body {
 
 .btn {
   background: var(--secondary);
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 12px 24px;
   border: none;
   border-radius: 25px;
   transition: all 0.3s ease;
   cursor: pointer;
   text-decoration: none;
+  background-color: #24696500;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
 }
 
 .btn:hover {
   background: var(--primary);
   transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.9);
+  color: white;
 }
 
 /* === About Section === */
@@ -374,6 +402,12 @@ body {
   width: 50px;
   height: 50px;
   animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
+  cursor: pointer;
+}
+.tech-icons img:hover {
+  animation: float 9ms ease-in-out infinite, zoomIn 1s ease forwards;
 }
 
 @keyframes float {
